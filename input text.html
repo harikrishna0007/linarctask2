@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task2</title>
+   <style>
+    table tr:not(:first-child) {
+           cursor:pointer;
+       }
+       table tr:hover{ 
+           background-color: rgb(7, 243, 38);
+
+       }
+   </style>
+</head>
+
+<body>
+    
+    <table id="table" border="1">
+        <tr>
+            <th>name</th>
+            <th>role</th>
+        </tr>
+        <tr>
+            <td><input type="text" value="raj"></td>
+            <td><input type="text" value="project manager"></td>
+        </tr>
+        <tr>
+                <td><input type="text" value="arun"></td>
+                <td><input type="text" value="project lead"></td>
+        </tr>
+        <tr>
+                <td><input type="text" value="akaash"></td>
+                <td><input type="text" value="team leader"></td>
+        </tr>
+        <tr>
+                <td><input type="text" value="athiban"></td>
+                <td><input type="text" value="module leader"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="gowtham"></td>
+            <td><input type="text" value="senior engineer"></td>
+        </tr>
+        <tr>
+            <td>babu</td>
+            <td>project trainee</td>
+        </tr>
+        <tr>
+                <td>hariharn</td>
+                <td>QA</td>
+            </tr>
+            <tr>
+                    <td>jeya kumar</td>
+                    <td>architect</td>
+                </tr>
+                <tr>
+                  <td>name<input type="text" name="name" id="name"><br><br></td>
+                  <td>role<input type="text" name="role" id="role"><br><br></td>
+                </tr>
+
+    </table>
+    
+    
+
+    <script>
+       var table=document.getElementById('table');
+       for(var i=1;i<table.rows.length;i++){
+           table.rows[i].onclick=function()
+           {
+            //    rIndex=this.rowIndex;
+            //    console.log(rIndex);
+            console.log(this.cells[0].innerText)
+               document.getElementById('name').value=this.cells[0].innerText;
+             document.getElementById('role').value=this.cells[1].innerText;
+            //  document.getElementById('name').value=this.cells[0].innerHtml;
+            //  document.getElementById('role').value=this.cells[1].innerHtml;
+           };
+       }
+    </script>
+</body>
+
+</html>
