@@ -1,1 +1,1 @@
-# linarctask2   -> only table values are updated(exept input text field box values are not getting)
+# linarctask2   -> getting input values to a input field form when click on particular name all values should shown
